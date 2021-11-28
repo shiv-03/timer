@@ -16,27 +16,7 @@
     justify-content: space-evenly;
 }
 
-#countdown-hour {
-    border: 10px;
-    border-radius: 5px;
-    box-shadow: 3px 3px #888888;
-    padding: 10px 10px 10px;
-    font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bolder;
-}
-
-#countdown-min {
-    border: 10px;
-    border-radius: 5px;
-    box-shadow: 3px 3px #888888;
-    padding: 10px 10px 10px;
-    font-size: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bolder;
-}
-
-#countdown-sec {
+.countdown>div {
     border: 10px;
     border-radius: 5px;
     box-shadow: 3px 3px #888888;
@@ -49,13 +29,12 @@
 .buttons {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 5px 5px 5px;
-    margin: 25px 25px 25px;
+    margin: 25px;
 }
 
-#start-btn {
-    background-color: #4CAF50;
+.onclick_button {
     border: none;
     border-radius: 5px;
     color: white;
@@ -69,18 +48,12 @@
     transition: all 0.3s ease-in-out;
 }
 
+#start-btn {
+    background-color: #4CAF50;
+}
+
 #pause-btn {
     background-color: red;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
     display: none;
     opacity: 0;
     visibility: hidden;
@@ -88,14 +61,4 @@
 
 #reset-btn {
     background-color: blueviolet;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
 }
