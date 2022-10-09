@@ -17,68 +17,69 @@ var sec = 0;
 var startInterval;
 
 function timerStart() {
-    initialcountdown = ++initialcountdown;
+    initialcountdown = parseInt(initialcountdown) + 1;
 
-    countdownElement.innerHTML = initialcountdown;
+    if (initialcountdown < 10) {
+        countdownElement.innerHTML = '0' + initialcountdown;
+    } else {
+        countdownElement.innerHTML = initialcountdown;
+    }
+
     if (initialcountdown == 5) {
         initialcountdown = 0;
-        initialcountdown = ++initialcountdown;
 
-        mincount = ++mincount;
-        countminElement.innerHTML = mincount;
+        mincount = parseInt(mincount) + 1;
+        if (mincount < 10) {
+            countminElement.innerHTML = '0' + mincount;
+        } else {
+            countminElement.innerHTML = mincount;
+        }
 
     } else if (mincount == 15) {
         initialcountdown = 0;
-        initialcountdown = ++initialcountdown;
+        initialcountdown = initialcountdown + 1;
         mincount = 0;
-        mincount = ++mincount;
+        mincount = mincount + 1;
 
-        hourcount = ++hourcount;
-        counthourElement.innerHTML = hourcount;
+        hourcount = parseInt(hourcount) + 1;
+        if (hourcount < 10) {
+            counthourElement.innerHTML = '0' + hourcount;
+        } else {
+            counthourElement.innerHTML = hourcount;
+        }
     }
 }
-
-
 function startfunction() {
     startInterval = setInterval(timerStart, 1000);
     startButton.style.opacity = '0';
     startButton.style.visibility = 'hidden';
-    setTimeout(function() {
+    setTimeout(function () {
         startButton.style.display = 'none';
         pauseButton.style.display = 'block';
         pauseButton.style.opacity = '1';
         pauseButton.style.visibility = 'visible';
     }, 500);
-
 }
 
 function pausefunction() {
-    //sec = countdownElement.innerHTML;
-    //min = countminElement.innerHTML;
-    //hour = counthourElement.innerHTML;
     clearInterval(startInterval);
-
-
-
     pauseButton.style.opacity = '0';
     pauseButton.style.visibility = 'hidden';
-    setTimeout(function() {
+    setTimeout(function () {
         startButton.style.display = 'block';
         startButton.style.opacity = '1';
         startButton.style.visibility = 'visible';
         pauseButton.style.display = 'none';
     }, 500);
-
 }
 
 function resetfunction() {
     clearInterval(startInterval);
+    pausefunction();
     initialcountdown = 0;
     if (initialcountdown == 0) {
-        countminElement.innerHTML = 0;
-        counthourElement.innerHTML = 0;
-        countdownElement.innerHTML = 0;
+        countminElement.innerHTML = '00';
+        counthourElement.innerHTML = '00';
+        countdownElement.innerHTML = '00';
     }
-
-
 }
