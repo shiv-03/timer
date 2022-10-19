@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PROJECT 02 : FOODIES CORNER</title>
+
+    <script src="https://kit.fontawesome.com/64f4ba1195.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+        }
+
+        .header::before {
+            background-image: url('pj02/bg5.jpg');
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 577px;
+            z-index: -10;
+            opacity: 0.7;
+            background-repeat: no-repeat;
+            background-size: 1300px 577px;
+        }
+
+        /* NAVIGATION BAR */
+        /* LOGO AND LIST ITEMS */
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar li {
+            display: flex;
+        }
+
+        .items {
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        .items a {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+            padding: 12px;
+        }
+
+        .items :hover {
+            background-color: #fca0a0;
+            border-radius: 100px;
+            color: black;
+        }
+
+        #item1 {
+            margin-left: 0px;
+        }
+
+        #logo {
+            margin: 5px 10px;
+        }
+
+        #logo img {
+            height: 70px;
+            margin: 10px;
+            z-index: -1;
+            opacity: 1;
+        }
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-size: 95px;
+            color: #fca0a0;
+            margin-top: 105px;
+            font-family: 'Kaushan Script', cursive;
+        }
+
+        .para {
+            display: flex;
+            justify-content: left;
+            font-size: 40px;
+            color: #fca0a0;
+            margin-left: 120px;
+            font-family: 'Kaushan Script', cursive;
+        }
+
+        #p1 {
+            margin-top: 25px;
+        }
+
+        .services {
+            margin-top: 32px;
+            background-color: white;
+        }
+
+        h3 {
+            color: #eb3030;
+            display: flex;
+            justify-content: center;
+            font-size: 60px;
+            font-family: 'Baloo Bhai', cursive;
+            padding-top: 30px;
+        }
+
+        .container {
+            height: 436px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .serve {
+            width: 350px;
+            height: 350px;
+            color: #eb3030;
+            border: 6px solid #eb3030;
+            border-radius: 30px;
+            margin: 10px;
+            padding: 3px;
+            background-color: #eb303029;
+        }
+
+        #dine img {
+            width: 250px;
+            padding: 20px;
+        }
+
+        #dine {
+            display: flex;
+            justify-content: center;
+        }
+
+        #fd img {
+            width: 200px;
+            height: 183px;
+        }
+
+        #fd {
+            display: flex;
+            justify-content: center;
+            margin-bottom: -2px;
+        }
+
+        #buff img {
+            width: 220px;
+            padding: 20px;
+        }
+
+        #buff {
+            display: flex;
+            justify-content: center;
+        }
+
+        .cont {
+            text-align: justify;
+            padding: 20px;
+            font-size: 15px;
+            margin-top: -20px;
+            color: black;
+        }
+
+        .heads {
+            font-size: 30px;
+            font-family: 'Baloo Bhai', cursive;
+            text-align: center;
+        }
+
+        #apple img {
+            width: 80px;
+            height: 93px;
+            margin-left: 10px;
+        }
+
+        #apple {
+            margin-left: 70px;
+        }
+
+        #hp img {
+            width: 99px;
+            height: 93px;
+        }
+
+        #twitter img {
+            width: 120px;
+            height: 93px;
+            margin-left: -8px;
+        }
+
+        #skype img {
+            width: 105px;
+            height: 93px;
+        }
+
+        #fb img {
+            width: 100px;
+            height: 93px;
+        }
+
+        #yt img {
+            width: 140px;
+            height: 94px;
+            margin-left: -20px;
+        }
+
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 18px;
+            margin: 20px;
+            background-color: #fcdede;
+        }
+
+        .box:hover {
+            border-radius: 70px;
+            background-color: white;
+        }
+
+        .clients {
+            background-color: #fcdede;
+        }
+
+        .foot {
+            display: inline-block;
+            width: 100%;
+            height: 0px;
+            display: flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a i {
+            height: 25px;
+            width: 25px;
+            background-color: #f1fcfb;
+            border-radius: 50px;
+            text-align: center;
+            margin-right: 70px;
+            margin-left: 80px;
+            margin-top: 80px;
+            margin-bottom: 20px;
+            box-shadow: 3px 3px 1px 3px #ffd8d8;
+            font-size: 30px;
+            transition: all 0.3s linear;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        a:hover i {
+            transform: scale(1.2);
+        }
+
+        .fa-facebook {
+            color: #3180e7;
+        }
+
+        .fa-instagram {
+            color: #e84393;
+        }
+
+        .fa-twitter {
+            color: #3180e7;
+        }
+
+        .fa-youtube {
+            color: #e84118;
+            padding-right: 14px;
+
+        }
+
+        .conn {
+            margin-top: 70px;
+            font-weight: bold;
+            font-size: 25px;
+            font-family: 'Baloo Bhai', cursive;
+            color: #f1fcfb;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="header">
+        <nav class="navbar">
+            <div id="logo">
+                <img src="pj02/png1.png" alt="FOODIES CORNER">
+            </div>
+            <ul>
+                <li class="items" id="item1"><a href="#">HOME</a></li>
+                <li class="items"><a href="#">MENU</a></li>
+                <li class="items"><a href="#">SERVICES</a></li>
+                <li class="items"><a href="#">ABOUT US</a></li>
+                <li class="items"><a href="#">LOCATION</a></li>
+
+            </ul>
+            <div class="items">
+                <a href="signup.html" target="_blank">SIGN UP</a>
+            </div>
+            </navbar>
+    </section>
+
+    <section class="content">
+        <h1>WELCOME TO FOODIES</h1>
+        <p class="para" id="p1">A &nbsp Place &nbsp Where &nbsp You &nbsp Get</p>
+        <p class="para" id="p2">Excellent &nbsp Taste &nbsp In</p>
+        <p class="para" id="p3">Every &nbsp Bite</p>
+    </section>
+
+    <section class="services">
+        <h3>OUR SERVICES</h3>
+        <div class="container">
+
+            <div class="serve" id="s1">
+                <div id="dine">
+                    <img src="pj02/images.jpg" alt="DINE IN">
+                </div>
+                <div class="heads">
+                    DINE IN
+                </div>
+                <div class="cont">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio voluptas delectus dolorem
+                    voluptatum porro pariatur aperiam. Earum illo libero ut magnam quos accusamus. Illo perspiciatis
+                    nobis unde quae eos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, dignissimos.
+                </div>
+            </div>
+
+            <div class="serve" id="s2">
+                <div id="fd">
+                    <img src="pj02/abcd.png" alt="FOOD DELIVERY">
+                </div>
+                <div class="heads">
+                    FOOD DELIVERY
+                </div>
+                <div class="cont">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio voluptas delectus dolorem
+                    voluptatum porro pariatur aperiam. Earum illo libero ut magnam quos accusamus. Illo perspiciatis
+                    nobis unde quae eos. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, in.
+                </div>
+            </div>
+
+            <div class="serve" id="s3">
+                <div id="buff">
+                    <img src="pj02/bgg99.jpg" alt="BUFFET">
+                </div>
+                <div class="heads">
+                    BUFFET
+                </div>
+                <div class="cont">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat optio voluptas delectus dolorem
+                    voluptatum porro pariatur aperiam. Earum illo libero ut magnam quos accusamus. Illo perspiciatis
+                    nobis unde quae Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, reiciendis?
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients">
+        <h3>OUR CLIENTS</h3>
+        <div class="box" id="apple">
+            <img src="pj02/logo1.png" alt="APPLE">
+        </div>
+
+        <div class="box" id="hp">
+            <img src="pj02/logo3.png" alt="HP">
+        </div>
+
+        <div class="box" id="twitter">
+            <img src="pj02/logo7.png" alt="TWITTER">
+        </div>
+
+        <div class="box" id="skype">
+            <img src="pj02/logo4.png" alt="SKYPE">
+        </div>
+
+        <div class="box" id="fb">
+            <img src="pj02/logo5.png" alt="FACEBOOK">
+        </div>
+
+        <div class="box" id="yt">
+            <img src="pj02/logo6.png" alt="YOUTUBE">
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <div class="foot">
+
+            <div class="conn">CONNECT WITH US AT :</div>
+
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fa fa-facebook"></i>
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://twitter.com/?lang=en" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
